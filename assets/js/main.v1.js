@@ -83,7 +83,7 @@
       if (window.innerWidth <= 900) {
         rail.style.height = 'auto'; track.style.transform = ''; dist = 0; return;
       }
-      dist = Math.max(0, track.scrollWidth - window.innerWidth + 24);
+      dist = Math.max(0, track.scrollWidth - window.innerWidth);
       rail.style.height = (window.innerHeight + dist) + 'px';
       top = rail.getBoundingClientRect().top + window.scrollY;
       apply();

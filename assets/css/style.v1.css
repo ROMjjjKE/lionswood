@@ -1,4 +1,5 @@
 /* Lionswood: тёплое дерево, крупная антиква, сценарная прокрутка */
+html{overflow-x:clip}
 :root{
   --ink:#131009; --ink2:#1B150E; --paper:#F2E9DA; --paper2:#E7DBC6;
   --cedar:#A2603A; --gold:#C79A5B; --moss:#3F4A38; --body:#4A4235;
@@ -264,3 +265,9 @@
   .mani__cols p:first-child{margin-left:0}
   .hero__h1{letter-spacing:-.04em}
 }
+
+/* шапка на внутренних страницах: сразу тёмный текст на светлой подложке */
+body.inner .hd{background:rgba(242,233,218,.94);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(19,16,9,.14)}
+body.inner .hd .logo,body.inner .hd .nav a,body.inner .hd .hd__tel{color:#131009}
+body.inner .hd .btn--ghost{border-color:rgba(19,16,9,.4);color:#131009}
+body.inner .hd .btn--ghost:hover{background:#131009;color:#F7F1E4;border-color:#131009}
